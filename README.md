@@ -1,4 +1,3 @@
-```markdown
 # HW4 - NLP Processing Tasks
 
 **Student Name:** Nandu Panakanti  
@@ -24,35 +23,30 @@ Steps performed:
 - Keep only **nouns and verbs** based on POS tags  
 
 **Input Example:**
-```
-
 "John enjoys playing football while Mary loves reading books in the library."
 
-```
+markdown
+Copy code
 
 **Expected Output:**
-```
-
 ['enjoy', 'play', 'football', 'love', 'read', 'book', 'library']
 
-```
+yaml
+Copy code
 
 ---
 
 ### **Q2: Named Entity Recognition + Pronoun Ambiguity**
-- Performs **NER** using SpaCy.
+- Performs **NER** using SpaCy.  
 - Checks for pronouns (“he”, “she”, “they”) to detect ambiguity.
 
 **Input Example:**
-```
-
 "Chris met Alex at Apple headquarters in California. He told him about the new iPhone launch."
 
-```
+markdown
+Copy code
 
 **Expected Output:**
-```
-
 Named Entities:
 Chris → PERSON
 Alex → PERSON
@@ -62,7 +56,8 @@ iPhone → PRODUCT
 
 Warning: Possible pronoun ambiguity detected!
 
-````
+yaml
+Copy code
 
 ---
 
@@ -72,62 +67,46 @@ Warning: Possible pronoun ambiguity detected!
 ```bash
 py -3.11 -m venv spacyenv
 spacyenv\Scripts\activate
-````
-
-### **2️⃣ Install Dependencies**
-
-```bash
+2️⃣ Install Dependencies
+bash
+Copy code
 pip install --upgrade pip setuptools wheel
 pip install spacy
 python -m spacy download en_core_web_sm
-```
+💡 If SpaCy fails on your system, you can use the NLTK fallback code included.
 
-> 💡 If SpaCy fails on your system, you can use the NLTK fallback code included.
-
----
-
-## 🚀 How to Run
-
+🚀 How to Run
 Save the following scripts in your project directory:
 
-* `Q1_preprocessing.py`
-* `Q2_ner_ambiguity.py`
+Q1_preprocessing.py
+
+Q2_ner_ambiguity.py
 
 Then execute:
 
-```bash
+bash
+Copy code
 python Q1_preprocessing.py
 python Q2_ner_ambiguity.py
-```
+🧩 Dependencies
+Python 3.11
 
----
+SpaCy 3.8+
 
-## 🧩 Dependencies
+en_core_web_sm language model
 
-* Python 3.11
-* SpaCy 3.8+
-* `en_core_web_sm` language model
-* (Optional) NLTK for fallback processing
+(Optional) NLTK for fallback processing
 
----
-
-## 📄 Output
-
+📄 Output
 Both scripts print results to the console.
 You can redirect output to files if needed:
 
-```bash
+bash
+Copy code
 python Q1_preprocessing.py > output_q1.txt
 python Q2_ner_ambiguity.py > output_q2.txt
-```
-
----
-
-## 👨‍💻 Author
-
-**Nandu Panakanti**
-Roll No: **700770346**
+👨‍💻 Author
+Nandu Panakanti
+Roll No: 700770346
 Department of Computer Science
-
-```
-
+University of Central Missouri
